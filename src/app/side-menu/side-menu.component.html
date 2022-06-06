@@ -1,0 +1,20 @@
+<div class="position-relative">
+    <div class="myDetails text-center position-sticky">
+        
+    </div>
+    <div class="buttons position-fixed" style="width: 100%;">
+        <img src="../../assets/man-avatar.png" alt="Avatar man">
+        <h3>{{username}}</h3>
+        <ul class="navbar-nav m-2">
+            <li class="nav-item mb-1" >
+                <button type="button" class="btn btn-dark btn-md text-light" data-bs-toggle="modal" data-bs-target="#exampleModal">Post Tweet</button>
+            </li>
+            <li class="nav-item mb-1" id="myTweets" style="display: block;">
+              <a class="btn btn-dark btn-md text-light" aria-current="page" (click)="myTweets()">My Tweets</a>
+            </li>
+            <li class="nav-item mb-1" id="allTweets" style="display: none;">
+                <a class="btn btn-dark btn-md text-light" aria-current="page" href="/home">All Tweets</a>
+            </li>
+        </ul>
+    </div>
+</div>

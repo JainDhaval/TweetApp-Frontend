@@ -1,0 +1,23 @@
+<div class="container justify-content-center text-center">
+    <div class="user_intro justify-content-center text-center">
+        <h1>Users</h1>
+        <div class="user_body" *ngFor="let a of temp(math.ceil(users.length/4)); let MyIndex = index">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-3 col-md-6 col-sm-12" *ngFor="let user of users.slice(MyIndex*4,(MyIndex+1)*4);">
+                    <div class="card text-dark bg-info mb-3" style="max-width: 18rem; text-align: left;" id="{{user.userId}}">
+                        <div class="card-header">{{user.loginId}}</div>
+                        <p id="{{user.userId}}"hidden>{{user.userId}}</p>
+                        <div class="card-body">
+                            <h5 class="card-title">{{user.firstName}} {{user.lastName}}</h5>
+                            <p class="card-text m-1">{{user.emailId}}</p>
+                            <p class="card-text m-1">{{user.mobileNumber}}</p>
+                        </div>
+                        <div class="card-footer text-center">
+                            <button id="{{user.userId}}" class="btn btn-dark btn-bg" (click)="viewTweet(user.loginId)">View Tweets</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

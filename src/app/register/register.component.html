@@ -1,0 +1,49 @@
+<div class="container m-2">
+    <div class="row justify-content-center">
+        <div class="col-lg-6 col-md-6 col-sm-12" style="margin: 0;">
+            <div class="card-header bg-info text-light" style="width: 40rem; border: 0.2rem; border-color: black; border-style: solid;"> 
+                <h3 class="text-center">Enter your details to Register</h3>
+            </div>
+            <div class="card-body bg-light text-dark" style="font-weight: 700; width: 40rem; border: 0.2rem; border-color: black; border-style: solid;" >
+                <div class="row">
+                    <form #userRegistration="ngForm" (ngSubmit)="registerUser(userRegistration.value)" ngNativeValidate>
+                        <div class="form-group">
+                            <label class="form-label" for="firstName">First Name</label>
+                            <input type="text" id="firstName" name="firstName" class="form-control " placeholder="First Name" required ngModel>
+                        </div><br>
+                        <div class="form-group">
+                            <label class="form-label" for="lastName">Last Name</label>
+                            <input type="text" id="lastName" name="lastName" class="form-control " placeholder="Last Name" required ngModel>
+                        </div><br>
+                        <div class="form-group">
+                            <label for="mobileNumber">Mobile Number</label>
+                            <input type="text" id="mobileNumber" name="mobileNumber" class="form-control" placeholder="Mobile Number" pattern="[7-9]{1}[0-9]{9}" required ngModel>
+                        </div><br>
+                        <div class="form-group">
+                            <label class="form-label" for="emailId">Email Address</label>
+                            <input type="text" id="emailId" name="emailId" class="form-control" placeholder="Email Address" required ngModel>
+                        </div><br>
+                        <div class="form-group">
+                            <label class="form-label" for="loginId">Username</label>
+                            <input type="text" id="loginId" name="loginId" class="form-control" placeholder="Username" required ngModel>
+                        </div><br>
+                        <div class="form-group">
+                            <label class="form-label" for="password">Password</label>
+                            <input type="password" id="password" name="password" class="form-control" placeholder="Password" required ngModel>
+                        </div><br>
+                        <div class="form-group">
+                            <label class="form-label" for="confirmPassword">Confirm Password</label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" placeholder="Confirm Password" required [(ngModel)]="confirmPasssword">
+                        </div><br>
+
+                        <div class="form-group text-center">
+                            <input type="submit" class="btn btn-dark btn-bg" value="Register">
+                            <a href="/login" class="btn btn-dark btn-bg m-2">Sign in</a>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
