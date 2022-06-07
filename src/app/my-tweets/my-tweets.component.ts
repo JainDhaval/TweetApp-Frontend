@@ -61,4 +61,13 @@ export class MyTweetsComponent implements OnInit {
       (document.getElementById(tweetId) as HTMLElement).style.color = "black";
     }
   }
+
+  viewComments(tweetId:string){
+    if((document.getElementById("viewMyComments_"+tweetId) as HTMLElement).style.display == "block"){
+      (document.getElementById("viewMyComments_"+tweetId) as HTMLElement).style.display = "none";
+    }
+    else{
+      (document.getElementById("viewMyComments_"+tweetId) as HTMLElement).style.display = "block";
+    } 
+  }
 }

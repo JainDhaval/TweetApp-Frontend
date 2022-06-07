@@ -52,4 +52,13 @@ export class AllTweetsComponent implements OnInit {
     })
   }
 
+  viewComments(tweetId:string){
+    if((document.getElementById("viewComments_"+tweetId) as HTMLElement).style.display == "block"){
+      (document.getElementById("viewComments_"+tweetId) as HTMLElement).style.display = "none";
+    }
+    else{
+      (document.getElementById("viewComments_"+tweetId) as HTMLElement).style.display = "block";
+    } 
+  }
+
 }

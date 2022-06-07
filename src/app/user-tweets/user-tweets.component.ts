@@ -58,4 +58,13 @@ export class UserTweetsComponent implements OnInit {
     })
   }
 
+  viewComments(tweetId:string){
+    if((document.getElementById("viewMyComments_"+tweetId) as HTMLElement).style.display == "block"){
+      (document.getElementById("viewMyComments_"+tweetId) as HTMLElement).style.display = "none";
+    }
+    else{
+      (document.getElementById("viewMyComments_"+tweetId) as HTMLElement).style.display = "block";
+    } 
+  }
+
 }
