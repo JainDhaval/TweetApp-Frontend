@@ -1,8 +1,5 @@
 import { SearchUserService } from './../search-user/search-user.service';
 import { HomeService } from './../home/home.service';
-import { HomeComponent } from './../home/home.component';
-import { UserModel } from './../users/User';
-import { UsersService } from './../users/users.service';
 import { LoginService } from './../login/login.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
