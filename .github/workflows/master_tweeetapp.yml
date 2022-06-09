@@ -40,4 +40,4 @@ jobs:
         with:
           app-name: 'TweeetApp'
           publish-profile: ${{ secrets.AzureAppService_PublishProfile_c742f441521f4440bc138377cea59cce }}
-          package: ./dist/TweetApp
+          package: ./dist/TweetApp-FrontEnd
