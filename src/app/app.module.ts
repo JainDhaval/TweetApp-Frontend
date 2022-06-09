@@ -11,7 +11,6 @@ import { HomeComponent } from './home/home.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { UsersComponent } from './users/users.component';
-import { FilterPipe } from './navigation-bar/filter.pipe';
 import { SideMenuComponent } from './side-menu/side-menu.component';
 import { AllTweetsComponent } from './all-tweets/all-tweets.component';
 import { MyTweetsComponent } from './my-tweets/my-tweets.component';
@@ -27,7 +26,6 @@ import { SearchUserComponent } from './search-user/search-user.component';
     NavigationBarComponent,
     ForgotPasswordComponent,
     UsersComponent,
-    FilterPipe,
     SideMenuComponent,
     AllTweetsComponent,
     MyTweetsComponent,
