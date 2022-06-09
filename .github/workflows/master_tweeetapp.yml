@@ -25,7 +25,7 @@ jobs:
         run: |
           npm install --legacy-peer-deps
           npm run build --prod --if-present
-          working-directory: ./dist/TweetApp
+          working-directory: .
 
   deploy:
     runs-on: ubuntu-latest
