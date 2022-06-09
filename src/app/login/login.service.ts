@@ -1,3 +1,4 @@
+import { environment } from './../../environments/environment.prod';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -10,7 +11,7 @@ export class LoginService {
   constructor(private http?: HttpClient) { }
 
   login(data: any):Observable<any>{
-    return this.http.post(`http://localhost:8080/api/v1.0/tweets/login`,data);
+    return this.http.post(environment.baseUrl+`/api/v1.0/tweets/login`,data);
   }
 
   setUsername(userName:string){

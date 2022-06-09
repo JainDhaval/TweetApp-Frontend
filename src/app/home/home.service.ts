@@ -1,3 +1,4 @@
+import { environment } from './../../environments/environment.prod';
 import { Observable } from 'rxjs';
 import { PostTweetModel } from './Tweet';
 import { HttpClient } from '@angular/common/http';
@@ -12,6 +13,6 @@ export class HomeService {
 
   postTweet(postTweet:PostTweetModel, username:String):Observable<any>{
     console.log(postTweet);
-    return this.http.post(`http://localhost:8080/api/v1.0/tweets/`+username+`/add`,postTweet);
+    return this.http.post(environment.baseUrl+`/api/v1.0/tweets/`+username+`/add`,postTweet);
   }
 }

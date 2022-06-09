@@ -1,3 +1,4 @@
+import { environment } from './../../environments/environment';
 import { ReplyTweetModel } from './Reply';
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
@@ -11,14 +12,14 @@ export class AllTweetsService {
   constructor(private http:HttpClient) { }
 
   getAllTweets():Observable<any>{
-    return this.http.get(`http://localhost:8080/api/v1.0/tweets/all`);
+    return this.http.get(environment.baseUrl+`/api/v1.0/tweets/all`);
   }
 
   likeTweet(loginId:string, tweetId:string):Observable<any>{
-    return this.http.put(`http://localhost:8080/api/v1.0/tweets/`+loginId+`/like/`+tweetId,null);
+    return this.http.put(environment.baseUrl+`/api/v1.0/tweets/`+loginId+`/like/`+tweetId,null);
   }
 
   postComments(replyTweet:ReplyTweetModel,loginId:string, tweetId:string):Observable<any>{
-    return this.http.post(`http://localhost:8080/api/v1.0/tweets/`+loginId+`/reply/`+tweetId,replyTweet);
+    return this.http.post(environment.baseUrl+`/api/v1.0/tweets/`+loginId+`/reply/`+tweetId,replyTweet);
   }
 }
