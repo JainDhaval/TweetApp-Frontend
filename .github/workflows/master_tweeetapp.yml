@@ -39,5 +39,5 @@ jobs:
         uses: azure/webapps-deploy@v2
         with:
           app-name: 'TweeetApp'
-          publish-profile: $
+          publish-profile: ${{ secrets.AzureAppService_PublishProfile_c742f441521f4440bc138377cea59cce }}
           package: ./dist/TweetApp
